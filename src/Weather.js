@@ -1,6 +1,6 @@
 import "./Weather.css";
 
-export default function Weather() {
+export function Weather() {
   let weatherData = {
     city: "Lagos",
     date: "Tues 10:00",
@@ -74,3 +74,4 @@ export default function Weather() {
     </div>
   );
 }
+export default Weather;
