@@ -1,0 +1,70 @@
+.Weather .weather-app-city {
+  font-weight: 800;
+  font-size: 65px;
+  margin: 0;
+}
+.Weather .weather-app-temperature {
+  font-size: 48px;
+  font-weight: bold;
+}
+.Weather .weather-app-details {
+  font-size: 18px;
+  line-height: 20px;
+}
+.Weather .app-container {
+  background-color: white;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 50px;
+  box-shadow: 5px 5px 15px rgb(185, 185, 185, 0.8);
+}
+
+.Weather .search-form-input {
+  background-color: rgb(216, 218, 218);
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  font-family: "Dosis", serif;
+  font-size: 20px;
+}
+
+.Weather .search-form-button {
+  color: white;
+  padding: 10px 20px;
+  background-color: navy;
+  border: none;
+  border-radius: 5px;
+  font-family: "Dosis", serif;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.Weather .weather-app-info {
+  display: flex;
+  justify-content: space-between;
+}
+.Weather .weather-strong {
+  color: rgb(255, 141, 2);
+  font-weight: bold;
+}
+.Weather .weather-app-temperature {
+  display: flex;
+  justify-content: space-around;
+}
+.Weather .weather-app-temperature-value {
+  font-size: 60px;
+  margin-top: 0;
+}
+.Weather .weather-app-temperature-icon {
+  height: 70px;
+}
+.Weather .weather-app-temperature-unit {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+.Weather .weather-forecast-date {
+  text-align: center;
+}
