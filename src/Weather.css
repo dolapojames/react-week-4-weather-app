@@ -1,9 +1,13 @@
-.Weather .weather-app-city {
+.Weather {
+  font-family: "Dosis", serif;
+}
+
+.Weather h1 {
   font-weight: 800;
   font-size: 65px;
-  margin: 0;
 }
-.Weather .weather-app-temperature {
+
+.Weather temperature {
   font-size: 48px;
   font-weight: bold;
 }
@@ -13,9 +17,7 @@
 }
 .Weather .app-container {
   background-color: white;
-  max-width: 600px;
   border-radius: 8px;
-  margin: 0 auto;
   margin-top: 100px;
   padding: 50px;
   box-shadow: 5px 5px 15px rgb(185, 185, 185, 0.8);
@@ -25,19 +27,21 @@
   background-color: rgb(216, 218, 218);
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   padding: 10px;
-  font-family: "Dosis", serif;
+
   font-size: 20px;
 }
 
 .Weather .search-form-button {
+  /* change to bootsrap bt blue*/
+
   color: white;
   padding: 10px 20px;
   background-color: navy;
   border: none;
   border-radius: 5px;
-  font-family: "Dosis", serif;
+
   font-size: 20px;
   margin-left: 5px;
 }
@@ -49,18 +53,25 @@
   color: rgb(255, 141, 2);
   font-weight: bold;
 }
-.Weather .weather-app-temperature {
+.Weather .temperature {
   display: flex;
   justify-content: space-around;
 }
-.Weather .weather-app-temperature-value {
+
+.Weather .temperature-all {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Weather .temperature-value {
   font-size: 60px;
+  font-weight: 600;
   margin-top: 0;
 }
-.Weather .weather-app-temperature-icon {
+.Weather .temperature-icon {
   height: 70px;
+  margin-left: 70px;
 }
-.Weather .weather-app-temperature-unit {
+.Weather .temperature-unit {
   font-size: 20px;
   font-weight: normal;
   margin-top: 10px;
