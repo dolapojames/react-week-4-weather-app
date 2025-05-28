@@ -1,22 +1,23 @@
-import "./Weather.css";
 import axios from "axios";
+import "./Weather.css";
 import { useState } from "react";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherdata] = useState({});
-  const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
-    setWeatherdata({
+    console.log(response.data.temperature.current);
+    setWeatherData({
       temperature: response.data.temperature.current,
-      city: response.data.city,
       humidity: response.data.temperature.humidity,
-      wind: response.data.wind,
+      wind: response.data.wind.speed,
+      city: response.data.city,
       description: response.data.condition.description,
       date: response.data.time,
       iconUrl: response.data.icon_url,
     });
+
     setReady(true);
   }
 
@@ -51,8 +52,10 @@ export default function Weather(props) {
               <div className="col">
                 <h1 className="mb-2">{weatherData.city}</h1>
                 <p className=" weather-app-details">
-                  <span>{weatherData.date}</span>,{" "}
-                  <span>{weatherData.description}</span>
+                  <span>{weatherData.date}</span>,
+                  <span className="text-capitalize">
+                    {weatherData.description}
+                  </span>
                   <br />
                   Humidity:
                   <span className="weather-strong">
@@ -73,7 +76,7 @@ export default function Weather(props) {
                   </div>
                   <div className="temperature-all">
                     <div className="temperature-value">
-                      {weatherData.temperature}
+                      {Math.round(weatherData.temperature)}
                     </div>
                     <div className="temperature-unit">°C</div>
                   </div>
@@ -85,8 +88,9 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    let city = "Lagos";
     const apiKey = "5ca9a4e04df3dddde0tdc3bec6cd3f5o";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading";

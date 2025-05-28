@@ -68,8 +68,8 @@
   margin-top: 0;
 }
 .Weather .temperature-icon {
-  height: 70px;
-  margin-left: 70px;
+  height: 50px;
+  margin-left: 20px;
 }
 .Weather .temperature-unit {
   font-size: 20px;
