@@ -4,7 +4,7 @@
 
 .Weather h1 {
   font-weight: 800;
-  font-size: 65px;
+  font-size: 60px;
 }
 
 .Weather temperature {
@@ -68,8 +68,8 @@
   margin-top: 0;
 }
 .Weather .temperature-icon {
-  height: 50px;
-  margin-left: 20px;
+  height: 70px;
+  margin-left: 70px;
 }
 .Weather .temperature-unit {
   font-size: 20px;
