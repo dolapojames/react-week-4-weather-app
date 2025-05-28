@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.App a {
+  text-decoration: none;
+}
+
 .App body {
   background-color: rgb(216, 218, 218);
   font-family: "Dosis", serif;

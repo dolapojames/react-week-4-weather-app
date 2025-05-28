@@ -7,6 +7,10 @@
   font-size: 60px;
 }
 
+.Weather a {
+  text-decoration: none;
+}
+
 .Weather temperature {
   font-size: 48px;
   font-weight: bold;
@@ -55,12 +59,12 @@
 }
 .Weather .temperature {
   display: flex;
-  justify-content: space-around;
+  justify-content: snpace-around;
 }
 
 .Weather .temperature-all {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .Weather .temperature-value {
   font-size: 60px;
@@ -69,12 +73,12 @@
 }
 .Weather .temperature-icon {
   height: 70px;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 .Weather .temperature-unit {
-  font-size: 20px;
+  font-size: 20 px;
   font-weight: normal;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .Weather .weather-forecast-date {
   text-align: center;

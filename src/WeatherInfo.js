@@ -1,4 +1,5 @@
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -28,10 +29,7 @@ export default function WeatherInfo(props) {
               />
             </div>
             <div className="temperature-all">
-              <div className="temperature-value">
-                {Math.round(props.data.temperature)}
-              </div>
-              <div className="temperature-unit">°C</div>
+              <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
