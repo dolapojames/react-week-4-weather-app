@@ -73,7 +73,7 @@
 }
 .Weather .temperature-icon {
   height: 70px;
-  margin-left: 50px;
+  margin-left: 80px;
 }
 .Weather .temperature-unit {
   font-size: 20 px;
@@ -82,4 +82,11 @@
 }
 .Weather .weather-forecast-date {
   text-align: center;
+}
+
+.Weather .error-message {
+  color: brown;
+  margin-top: 20px;
+  font-size: larger;
+  margin-left: 10px;
 }

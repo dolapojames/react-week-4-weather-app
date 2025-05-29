@@ -31,6 +31,7 @@ export default function WeatherInfo(props) {
             <div className="temperature-all">
               <WeatherTemperature celsius={props.data.temperature} />
             </div>
+            <div></div>
           </div>
         </div>
       </div>

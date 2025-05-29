@@ -1,16 +1,17 @@
 import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
-
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState(props.defaultCity);
+  const [error, setError] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data.temperature.current);
+    setError(null);
     setWeatherData({
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
@@ -20,14 +21,18 @@ export default function Weather(props) {
       date: new Date(response.data.time * 1000),
       iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
     });
+    setReady(true);
+  }
 
+  function handleError() {
+    setError("Enter a city name!");
     setReady(true);
   }
 
   function search() {
     const apiKey = "5ca9a4e04df3dddde0tdc3bec6cd3f5o";
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(handleError);
   }
 
   function handleSubmit(event) {
@@ -65,7 +70,11 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <WeatherInfo data={weatherData} />
+          {error ? (
+            <div className="error-message">{error} </div>
+          ) : (
+            <WeatherInfo data={weatherData} />
+          )}
         </div>
       </div>
     );
