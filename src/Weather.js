@@ -2,6 +2,7 @@ import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -73,6 +74,11 @@ export default function Weather(props) {
             <div className="error-message">{error} </div>
           ) : (
             <WeatherInfo data={weatherData} />
+          )}
+          {error ? (
+            <div className="error-message">{} </div>
+          ) : (
+            <WeatherForecast data={weatherData} />
           )}
         </div>
       </div>

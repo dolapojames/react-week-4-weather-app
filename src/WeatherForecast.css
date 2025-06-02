@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.WeatherForecastTemperature-min {
-  opacity: 0.6;
+.WeatherForecast-temperature-low {
   margin-left: 5px;
+  opacity: 0.6;
 }
