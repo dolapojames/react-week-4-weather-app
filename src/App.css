@@ -5,6 +5,8 @@
 
 .App a {
   text-decoration: none;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .App body {
